@@ -1,1 +1,2 @@
-# RUC_ICPC_school_match_2021_fall_hardcore
+# 中国人民大学ICPC秋季校赛——硬核组
+
