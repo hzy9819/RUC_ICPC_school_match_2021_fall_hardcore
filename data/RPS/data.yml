@@ -1,0 +1,13 @@
+subtasks:
+  - score: 100              # 这个子任务的分数（注意，所有子任务的总分必须为 100）
+    type: sum              # 子任务类型，可选的值有 sum、min 和 mul.
+    cases: [1, 2, 3]       # 测试点编号可为数字
+
+inputFile: 'rps#.in'   # 测试数据包中的输入文件
+# outputFile: 'dat#.ans' # 测试数据包中的输出文件
+# 上述文件名中的 # 字符将被替换为测试点编号
+
+# 交互器
+interactor:
+  language: cpp
+  fileName: interactor.cpp
