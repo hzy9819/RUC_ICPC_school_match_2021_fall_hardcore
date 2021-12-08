@@ -30,14 +30,16 @@ void DataLoader(const char * file_name, Graph & G, std::vector< std::vector<size
     }
 }
 
-int main() {    
+int main(int argc, char * argv[]) {    
     Graph G;
     std::vector< std::vector<size_t> > V;
-    DataLoader("route.in", G, V);
+    V.clear();
+    DataLoader(argv[1], G, V);
     std::vector< bool > res;
     G.check_connectivity_T(V, res);
+    FILE * fout = fopen(argv[2], "w");
     for(auto it = res.begin(); it != res.end(); ++it)
-        *it ? puts("YES") : puts("NO");
-
+        // *it ? puts("YES") : puts("NO");
+        fprintf(fout, "%s\n", *it ? "YES" : "NO");
     return 0;
 }
