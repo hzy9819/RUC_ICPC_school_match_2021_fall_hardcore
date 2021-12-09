@@ -25,6 +25,8 @@ void random_query(FILE * fout, int n, int k) {
                 fprintf(fout, "%d ", tmp);
                 vis[tmp] = i;
             }
+            else
+                j--;
         }
         fprintf(fout, "\n");
     }
@@ -76,7 +78,7 @@ int main() {
         random_tree(fin, 1e6, 2e6);
         random_query(fin, 1e6, 2e6);
         cmd_line = "./route " + in_name + " " + out_name;
-        system(cmd_line.c_str());
+        // system(cmd_line.c_str());
     }
     for(int i = num1; i < num2; ++i) {
         in_name = name + to_string(i) + ".in";
@@ -85,7 +87,7 @@ int main() {
         half_star_graph(fin, 1e6, 2e6);
         random_query(fin, 1e6, 2e6);
         cmd_line = "./route " + in_name + " " + out_name;
-        system(cmd_line.c_str());
+        // system(cmd_line.c_str());
     }
     for(int i = num2; i < TESTCASE; ++i) {
         in_name = name + to_string(i) + ".in";
@@ -94,7 +96,7 @@ int main() {
         half_star_graph(fin, 1e6, 2e6);
         half_star_query(fin, 1e6, 2e6);
         cmd_line = "./route " + in_name + " " + out_name;
-        system(cmd_line.c_str());
+        // system(cmd_line.c_str());
     }
 
 }

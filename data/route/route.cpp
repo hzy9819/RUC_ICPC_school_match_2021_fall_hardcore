@@ -16,9 +16,9 @@ void DataLoader(const char * file_name, Graph & G, std::vector< std::vector<size
     G.build_fa();
 
     fscanf(fin, "%lu", &k);
-    std::vector<size_t> tmp;
 
     for(size_t i = 0; i < k; ++i) {
+        std::vector<size_t> tmp;
         tmp.clear();
         size_t sz, temp;
         fscanf(fin, "%lu", &sz);
@@ -26,6 +26,8 @@ void DataLoader(const char * file_name, Graph & G, std::vector< std::vector<size
             fscanf(fin, "%lu", &temp);
             tmp.push_back(temp);
         }
+        // if(i % 10000 == 0)
+        //     printf("%lu\n", i);
         V.push_back(tmp);        
     }
 }
@@ -34,9 +36,12 @@ int main(int argc, char * argv[]) {
     Graph G;
     std::vector< std::vector<size_t> > V;
     V.clear();
+    printf("%d\n", argc);
+    printf("%s\n", argv[1]);
     DataLoader(argv[1], G, V);
     std::vector< bool > res;
     G.check_connectivity_T(V, res);
+    printf("%s\n", argv[2]);
     FILE * fout = fopen(argv[2], "w");
     for(auto it = res.begin(); it != res.end(); ++it)
         // *it ? puts("YES") : puts("NO");
