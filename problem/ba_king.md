@@ -27,7 +27,7 @@ $$
 
 #### Output
 
-​	第一行，如果$Ogi$的期望过题数最多（或并列，精度3位小数），则输出"Ogi is BABA AND WIN!"，不然，输出"NOT Ogi is BABA AND WIN!"。
+​	第一行，如果$Ogi$的期望过题数最多（或并列，$eps=1e-4$），则输出"Ogi is BABA AND WIN!"，不然，输出"NOT Ogi is BABA AND WIN!"。
 
 ​	接下来$n$行，每行一个实数，即$i$号小伙伴的期望过题数（保留3位小数）。
 
