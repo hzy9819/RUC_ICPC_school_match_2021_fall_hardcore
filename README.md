@@ -44,5 +44,5 @@ make data
 
 ​	支持数据生成器题目列表：
 
-		- route
-		- ba_king
+- route
+- ba_king
