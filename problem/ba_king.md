@@ -23,7 +23,7 @@ $$
 
 ​	接下来$n$行，每行$m$个实数$\lambda_{ij}$.
 
-​	$1 \le n,m \le 1000, 0 \le \lambda_{ij} \le 11.4514$
+​	$1 \le n,m \le 1000, 0 \le \lambda_{ij} \le 20$
 
 #### Output
 
@@ -33,5 +33,19 @@ $$
 
 #### Input Sample
 
+```
+2 2
+11.4514 19.19810
+19.19810 11.4514
+```
+
 #### Output Sample
+
+```
+Ogi is BABA AND WIN!
+1.000
+1.000
+```
+
+
 
