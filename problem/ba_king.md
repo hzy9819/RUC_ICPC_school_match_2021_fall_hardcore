@@ -23,7 +23,7 @@ $$
 
 ​	接下来$n$行，每行$m$个实数$\lambda_{ij}$.
 
-​	$1 \le n,m \le 1000, 0 \le \lambda_{ij} \le 20$
+​	$1 \le n,m \le 1000, 1 \le \lambda_{ij} \le 20$
 
 #### Output
 
