@@ -77,7 +77,6 @@ int main() {
 			fa[0] = -1;
 			for(int i = 1; i <= k; ++i)
 			{
-				fscanf(f1, "%d", &x);
 				int res = work(f1, i);
 				if(!res)
 				{
