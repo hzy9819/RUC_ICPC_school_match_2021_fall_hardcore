@@ -30,7 +30,7 @@ int main(int argc, char * argv[]) {
 
     if(H.build_join_forest(G)) {
         fprintf(fout, "YES\n");
-        for(size_t i = 0; i < G.m; ++i)
+        for(size_t i = 0; i < G.n; ++i)
             for(size_t j = G.lst[i]; j != -1; j = G.e[j].nxt)
                 if(i < G.e[j].to)
                     fprintf(fout, "%lu %lu\n", i, G.e[j].to);
