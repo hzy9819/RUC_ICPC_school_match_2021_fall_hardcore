@@ -4,7 +4,7 @@ using namespace std;
 
 const int TESTCASE = 3;
 const int N = 1e6;
-const int K = 1e8;
+const int K = 1e7;
 
 void random_tree(FILE * fout, int n, int k) {
     fprintf(fout, "%d\n", n);
