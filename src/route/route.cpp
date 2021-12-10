@@ -34,12 +34,15 @@ void Dfs(int t) {
 }
 
 int main() {
+    // freopen("route2.in", "r", stdin);
+    // freopen("route2.out", "w", stdout);
     n = read();
     memset(lst, -1, sizeof lst);
     int x, y;
     for(int i = 1; i < n; ++i) {
         x = read(), y = read();
         add(x, y), add(y, x);
+        fa[i] = -1;
     }
     fa[0] = 0;
     Dfs(0);

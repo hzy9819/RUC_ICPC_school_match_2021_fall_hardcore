@@ -16,8 +16,8 @@ clean:
 clean_data:
 	rm -f *.in *.out
 
-$(src):$(src).cpp Hypergraph.cpp -O2
-	$(CC) -o $(src) $(src).cpp Hypergraph.cpp
+$(src):$(src).cpp Hypergraph.cpp 
+	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -O2
 $(data):$(data).cpp
 	$(CC) -o $(data) $(data).cpp -O2
 
