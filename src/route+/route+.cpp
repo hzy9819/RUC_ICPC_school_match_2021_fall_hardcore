@@ -181,6 +181,7 @@ bool Hypergraph::build_join_forest(Graph & G) {
 
 void DataLoader(const char * file_name, Hypergraph & G) {
     FILE * fin = fopen(file_name, "r");
+    fin = stdin;
     size_t n, m, sz, tmp;
     fscanf(fin, "%lu %lu", &n, &m);
     G.set(m, n);
