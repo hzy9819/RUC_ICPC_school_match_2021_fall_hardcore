@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int N = 1e6;
+const int N = 1000010;
 
 int read() {
     int w = 0, f = 0; char c = getchar();
