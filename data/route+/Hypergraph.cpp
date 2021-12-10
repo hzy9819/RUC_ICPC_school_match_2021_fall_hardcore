@@ -85,13 +85,20 @@ bool Hypergraph::check_acyclic() {
 }
 
 bool Hypergraph::build_join_forest(Graph & G) {
-    size_t a[n], b[n], y[m + 5], R[m + 5], k;
+    // size_t a[n], b[n], y[m + 5], R[m + 5], k;
+    size_t * a = (size_t *) malloc(sizeof(size_t) * n);
+    size_t * b = (size_t *) malloc(sizeof(size_t) * n);
+    size_t * y = (size_t *) malloc(sizeof(size_t) * (m+5));
+    size_t * R = (size_t *) malloc(sizeof(size_t) * (m+5));
+    size_t k;
     this->max_cardinality_search(a, b, y, R, k);
     std::vector <size_t> rev[k + 5];
 
-    if(! this->test_zero_fill_in(b, y, R, k))
+    if(! this->test_zero_fill_in(b, y, R, k)) {
         // puts("The hypergraph is not acyclic!");
+        free(a), free(b), free(y), free(R);
         return false;
+    }
     else {
         /*
         for(size_t i = 0; i < n; ++i)
@@ -117,6 +124,7 @@ bool Hypergraph::build_join_forest(Graph & G) {
                 // printf("%d %d\n", j, R[y[j]]);
             }
     }
+    free(a), free(b), free(y), free(R);
     return true;
 }
 

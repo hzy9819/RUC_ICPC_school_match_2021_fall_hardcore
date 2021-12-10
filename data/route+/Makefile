@@ -1,13 +1,13 @@
 CC:=g++
-src:=route
+src:=route+
 data:=data_maker
 
 exe:
-	$(CC) -o $(src) $(src).cpp Hypergraph.cpp
+	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -O2 
 	$(CC) -o $(data) $(data).cpp
 
 debug:
-	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -g -Wall
+	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -g -Wall 
 	$(CC) -o $(data) $(data).cpp -g -Wall
 
 clean: 

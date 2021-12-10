@@ -5,19 +5,20 @@
 void DataLoader(const char * file_name, Hypergraph & G) {
     FILE * fin = fopen(file_name, "r");
     size_t n, m, sz, tmp;
-    HyperEdge temp;
     fscanf(fin, "%lu %lu", &n, &m);
-    G.set(n, m);
+    G.set(m, n);
+
+    std::vector< std::vector<size_t> > V(n);
 
     for(size_t i = 0; i < m; ++i) {
         fscanf(fin, "%lu", &sz);
-        temp.clear();
         for(size_t j = 0; j < sz; ++j) {
             fscanf(fin, "%lu", &tmp);
-            temp.push_back(tmp);
+            V[tmp].push_back(i);
         }
-        G.add(temp);
     }
+    for(size_t i = 0; i < n; ++i)
+        G.add(V[i]);
 }
 
 int main(int argc, char * argv[]) {
@@ -36,7 +37,5 @@ int main(int argc, char * argv[]) {
     }
     else 
         fprintf(fout, "NO\n");
-    
-
     return 0;
 }
