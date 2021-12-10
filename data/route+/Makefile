@@ -4,7 +4,7 @@ data:=data_maker
 
 exe:
 	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -O2 
-	$(CC) -o $(data) $(data).cpp
+	$(CC) -o $(data) $(data).cpp -O2
 
 debug:
 	$(CC) -o $(src) $(src).cpp Hypergraph.cpp -g -Wall 
@@ -16,10 +16,10 @@ clean:
 clean_data:
 	rm -f *.in *.out
 
-$(src):$(src).cpp Hypergraph.cpp
+$(src):$(src).cpp Hypergraph.cpp -O2
 	$(CC) -o $(src) $(src).cpp Hypergraph.cpp
 $(data):$(data).cpp
-	$(CC) -o $(data) $(data).cpp
+	$(CC) -o $(data) $(data).cpp -O2
 
 
 data:$(src) $(data)
