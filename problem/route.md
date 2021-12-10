@@ -20,7 +20,7 @@
 
 ​	$1 \le n \le 10^6, 0 \le x,y,S_{i,j} < n$
 
-​	$\sum |S_i| \le 10^8$
+​	$\sum |S_i| \le 10^7$
 
 #### Output
 

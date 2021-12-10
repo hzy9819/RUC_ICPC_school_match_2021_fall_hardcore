@@ -3,8 +3,8 @@ src:=ba_king
 data:=data_maker
 
 exe:
-	$(CC) -o $(src) $(src).cpp
-	$(CC) -o $(data) $(data).cpp
+	$(CC) -o $(src) $(src).cpp -O2
+	$(CC) -o $(data) $(data).cpp -O2
 
 debug:
 	$(CC) -o $(src) $(src).cpp -g -Wall
@@ -17,9 +17,9 @@ clean_data:
 	rm -f *.in *.out
 
 $(src):$(src).cpp 
-	$(CC) -o $(src) $(src).cpp 
+	$(CC) -o $(src) $(src).cpp -O2
 $(data):$(data).cpp
-	$(CC) -o $(data) $(data).cpp
+	$(CC) -o $(data) $(data).cpp -O2
 
 data:$(src) $(data)
 	./$(data)
